@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+      width: 100%;
+      font-size: 16px;
+      line-height:1.5;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+}
+h2{
+    text-transform: capitalize ;
+    
+}
+a{
+    color: white;
+    text-decoration: none ;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;    /* same as flex-grow: 1; */
+}
+#faja-horizontal{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    font-size:1.25rem;
+    width: 100%;
+}
+#foto{
+    width: 33.33%;
+    background-color: #18a094;    
+    
+}
+#foto img{
+    width: 25%;
+    display: block;
+    margin: auto;
+    border-radius: 6.25rem;
+    margin-top: 1.25rem;
+    
+}
+#presentacion{
+    width: 66.67%;    
+    padding: 2.5rem 2.5rem;
+
+}
+#contenedor{
+    width: 100%;
+    display: flex;
+    
+}
+#faja-vertical{
+    width: 33.33%;
+    background-color: #18a094;
+    color:white;
+    padding: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Montserrat;
+    
+}
+#faja-vertical h2 {
+    padding-left: 1.25rem;
+}
+#faja-vertical p,#datos-personales a  {
+    padding-left: 1.25rem;
+    font-weight: bold;
+}
+
+#faja-vertical li {
+    list-style-type: none ;
+    padding-left: 1.25rem;
+    font-weight: bold;
+}
+#faja-vertical li a{
+    
+    padding-left: 0;
+}
+
+#datos-personales, #habilidades {
+    margin-bottom: 1.25rem;
+    
+}
+#habilidades{
+    line-height:2.5;
+}
+
+
+
+/*seccion apiladas*/
+
+#contenedor2{
+    display: flex;
+    flex-direction: column;
+    width: 66.67%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 0.625rem;
+}
+
+#experiencia{
+    background-color: white;
+    padding-left: 2.5rem;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+#experiencia li h2{
+    color: #18a094;
+}
+.lista1 li{
+    list-style-type:square;
+    padding-left: 0px;
+}
+.lista2 li{
+    list-style-type:square;
+    margin-left:  2.5rem;
+}
+.titulo{
+    margin-bottom: 1.875rem;
+    margin-top:0.313rem;
+    
+   
+}
+/*main*/
+@media all and (max-width: 600px){ 
+    #contenedor { 
+        display: flex;  
+        flex-direction: column; 
+    }
+    #contenedor2 { 
+        display: flex;  
+        flex-direction: column; 
+    }
+    #faja-horizontal{
+        flex-direction:column;
+        align-items:center;
+    }
+    #foto{
+        width: 33.33%;
+        background-color: #eeeeee;          
+        
+    }
+    #foto img{
+       width: 100px;
+    }
+    #presentacion{
+        padding: 0.5rem;
+        width: 90%;
+        
+    }
+    #presentacion p{
+       
+    }
+    #presentacion h2{
+        text-align: center;
+    } 
+    #faja-vertical{
+        width: 100%;
+    }
+   
+
+}
+@media all and (max-width: 900px) { 
+    
+    #faja-horizontal{
+        flex-direction:column;
+        align-items:center;
+    }
+    #foto{
+        
+        background-color: #eeeeee;          
+        
+    }
+    #presentacion{
+        padding: 1rem;
+    }
+    #faja-vertical{
+        padding: 1rem; 
+    }
+}
+
+/* nav*/ 
+nav {
+     background: #222; 
+     padding: 0.313rem 1.25rem; 
+    } 
+nav ul {
+     list-style-type: none; 
+    } 
+.item a, .toggle a, .logo{ 
+    color: white; 
+    text-decoration: none;
+    padding: 0.5rem;
+} 
+    
+.item a:hover { 
+    text-decoration: none;  
+    background-color: white;
+    color: black;
+    border-radius: 0.625rem;
+} 
+
+.logo a:hover { 
+    text-decoration: none; 
+} 
+.menu li { 
+    font-size: 1rem; 
+    padding: 1rem 0.313rem; 
+    white-space: nowrap; 
+}
+.toggle a { 
+    font-size: 1.25rem; 
+} 
+.button.secondary { 
+    border-bottom: 1px #444 solid; 
+}
+
+/* Mobile menu */ 
+.menu { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+} 
+.toggle { 
+    order: 1; 
+} 
+.item { 
+    width: 100%; 
+    text-align: center; 
+    order: 2; 
+    display: none; 
+} 
+.item.active { 
+    display: block; 
+}
+
+/* Tablet menu */ 
+@media all and (min-width: 600px){ 
+.menu { 
+    justify-content: center; 
+    } 
+.logo { 
+    flex: 1; 
+    } 
+.toggle {
+    flex: 1; 
+    text-align: right; 
+    } 
+.item.button { 
+    width: auto; 
+    order: 1; 
+    display: block;
+    } 
+.toggle { 
+    order: 2; 
+    } 
+}
+
+/* Desktop menu */ 
+@media all and (min-width: 900px) { 
+
+.item { 
+    display: block; 
+    width: auto; 
+    } 
+.toggle { 
+    display: none; 
+    } 
+.logo { 
+    order: 0; 
+    } 
+.item { 
+    order: 1; 
+    } 
+.menu li { 
+    padding: 1rem 0.625rem; 
+    } 
+}
+/*FOOTER*/ 
+
+footer {
+    background-color: #555;
+    color: #bbb;
+    line-height: 1.5;
+}
+footer a {
+    text-decoration: none;
+    color: #eee;
+}
+footer li {
+    list-style: none;
+}
+.ft-title {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.ft-main {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.ft-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem /*200px*/;
+}
+
+@media all and (min-width: 900px ) {
+    .ft-main {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .ft-legal-list {
+        justify-content:flex-end;
+    }
+}
+.ft-social {
+    padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid; 
+    padding-top: 1.25rem;
+}
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+.ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+}
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
